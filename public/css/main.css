@@ -2,20 +2,24 @@ body{
     background-color:lightblue;
     width:100%;
     height:100%;
+    margin:0px;
+    
 }
-
+#app{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
 #appHeading{
-    width:90%;
+    border-color:green;
+    width:450px;
     height:220px;
     display:flex;
-    justify-content:space-around;    
+    align-items:center;
 }
-#choresListing{
-    width:90%;
-    display:flex;
-    justify-content:space-around;
-    border-style:solid;
-}
+
 #menu{
     border-style:solid;
     border-color:lightgrey;
@@ -33,4 +37,55 @@ body{
     border-style:none;
     border-radius:10px;
     box-shadow:2px 1px 1px grey;
+}
+#choresListing{
+    width: 450px;
+    height: 500px;
+    overflow-y:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    text-align:center;
+    align-items:center;
+}
+.highp{
+    display:block;
+    width:390px;
+    height:30px;
+    padding:5px;
+    margin:5px;
+    color:red;
+    border-style:solid;
+    border-color:red;
+    font-family:impact;
+    font-size:20px;
+    box-shadow: 5px 5px 3px darkred;
+    opacity:1;
+    animation-name:fadeIn;
+    animation-duration:5s;
+}
+@keyframes fadeIn{
+    from {opacity: 0};
+    to  {opacity:1};
+}
+@keyframes alternateColor{
+    0% {color:red};
+    50% {color:blue};
+    100% {color:red};
+}
+.lowp{
+    display:block;
+    width:390px;
+    height:30px;
+    margin:5px;
+    padding:5px;
+    color:green;
+    border-style:solid;
+    border-color:green;
+    font-family:georgia;
+    font-size:20px;
+    box-shadow: 5px 5px 3px darkgreen;
+    opacity:1;
+    animation-name:fadeIn;
+    animation-duration:10s;
 }

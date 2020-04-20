@@ -9,25 +9,25 @@
 </head>
 <body>
     <div id="app">
-        {{ banana }} 
         <div id="appHeading">
             <div id="menu">
                 <h1> ToDo's</h1>
-                <form >
-                    <!-- v-on:submit.prevent="saveNewItem" -->
-                    <input type="text" id="toDoItem" />
+                <form v-on:submit.prevent="saveNewItem">
+                    <input type="text" id="toDoItem" v-model="newToDo" />
                     <label for="toDoPriority">High</label>
-                    <input type="radio" id="toDoPriority" name="priority" value="high"/>
+                    <input type="radio" id="toDoPriority" name="priority" v-model="newPriority" value="high"/>
                     <label for="toDoPriority">Low</label>
-                    <input type="radio" id="toDoPriority" name="priority" value="low"/>
+                    <input type="radio" id="toDoPriority" name="priority" v-model="newPriority" value="low"/>
                     <input type="submit" value="Save item" class="button">
                 </form>
             </div>
         </div>
         <div id="choresListing">
-            <!-- <div v-for="chore in chores">
-                {{ chore.name }}
-            </div> -->
+            <div v-for="chore of chores">
+                <span v-bind:class="(chore.priority == 'low') ? 'lowp' : 'highp' ">
+                    {{ chore.name }}
+                </span>
+            </div>
         </div>
     </div>
 </body>
