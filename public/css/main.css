@@ -1,14 +1,28 @@
 body{
     background-color:lightblue;
+    width:100%;
+    height:100%;
 }
 
-#app{
+#appHeading{
+    width:90%;
+    height:220px;
+    display:flex;
+    justify-content:space-around;    
+}
+#choresListing{
+    width:90%;
+    display:flex;
+    justify-content:space-around;
+    border-style:solid;
+}
+#menu{
     border-style:solid;
     border-color:lightgrey;
     border-radius:20px;
     padding:15px;
     background-color:white;
-    box-shadow: 20px 20px 3px;
+    box-shadow: 7px 7px 6px;
     width: 400px;
     height:150px;
 }

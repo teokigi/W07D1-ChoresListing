@@ -5,20 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/bundle.js"></script>
-    <title>Chores</title>
+    <title>Household Chores</title>
 </head>
 <body>
     <div id="app">
-        <!--content-->
-        <h1> ToDo's</h1>
-        <form v-on:submit.prevent="saveNewItem">
-            <input type="text" name="toDoItem" />
-            <label for="toDoPriority">High</label>
-            <input type="radio" name="toDoPriority" value="high"/>
-            <label for="toDoPriority">Low</label>
-            <input type="radio" name="toDoPriority" value="low"/>
-            <input type="submit" value="Save item" class="button">
-        </form>
+        {{ banana }} 
+        <div id="appHeading">
+            <div id="menu">
+                <h1> ToDo's</h1>
+                <form >
+                    <!-- v-on:submit.prevent="saveNewItem" -->
+                    <input type="text" id="toDoItem" />
+                    <label for="toDoPriority">High</label>
+                    <input type="radio" id="toDoPriority" name="priority" value="high"/>
+                    <label for="toDoPriority">Low</label>
+                    <input type="radio" id="toDoPriority" name="priority" value="low"/>
+                    <input type="submit" value="Save item" class="button">
+                </form>
+            </div>
+        </div>
+        <div id="choresListing">
+            <!-- <div v-for="chore in chores">
+                {{ chore.name }}
+            </div> -->
+        </div>
     </div>
 </body>
 </html>

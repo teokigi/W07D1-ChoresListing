@@ -4,7 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
   new Vue({
     el: "#app",
     data: {
-        greeting:"hello world!"
+        chores: [
+            {name: "Vacuuming", priority: "high"}
+        ]
+    },
+    methods: {
+        saveNewItem:function(){
+            const newChore = {name:this.name, priority:this.toDoPriority}
+        }
     }
   
   });
