@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/bundle.js"></script>
+    <title>Chores</title>
+</head>
+<body>
+    <div id="app">
+        <!--content-->
+        <h1> ToDo's</h1>
+        <form v-on:submit.prevent="saveNewItem">
+            <input type="text" name="toDoItem" />
+            <label for="toDoPriority">High</label>
+            <input type="radio" name="toDoPriority" value="high"/>
+            <label for="toDoPriority">Low</label>
+            <input type="radio" name="toDoPriority" value="low"/>
+            <input type="submit" value="Save item" class="button">
+        </form>
+    </div>
+</body>
+</html>
