@@ -7,9 +7,9 @@ Javascript
 
 ## dependancies
 
-install node package manager
+install node package manager, and run serve
 `npm install`
-`npm i vue`
+`npm run serve`
 
 ## Summary
 
